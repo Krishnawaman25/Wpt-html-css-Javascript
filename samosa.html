@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .food{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="food">
+        <img id="sam" src="../Assets/multimedia/Samosa.jpg" alt="100" height="100" width="100">
+        <h5 id="foodname">Samosa</h5>
+      <button type="button" onclick="changeImg1('samosa')">Samosa</button>
+      <button type="button" onclick="changeImg2('kachori')">kachori</button>
+      <button type="button" onclick="changeImg3('wadapaw')">wadapav</button>
+      
+
+    </div>
+    
+    <script>
+        function changeImg1(food){
+             document.getElementById("sam").src="../Assets/multimedia/Samosa.jpg";
+             document.getElementById("foodname").innerHTML=food;
+        }
+        function changeImg2(food){
+            document.getElementById("sam").src="../Assets/multimedia/Kachori.jpg";
+            document.getElementById("foodname").innerHTML=food;
+        }
+        function changeImg3(food){
+            document.getElementById("sam").src="../Assets/multimedia/Wadapaw.jpg";
+            document.getElementById("foodname").innerHTML=food;
+        }
+    </script>
+</body>
+</html>

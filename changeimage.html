@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main{
+            margin: auto;
+            width: 60%;
+            height: 500px;
+            border: 2px solid black;
+        
+        }
+        .img image{
+           height:200%px;
+           width:90%;
+           margin:20%;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: 5px;
+        }
+        .btn button{
+            border-radius: 5px;
+            background-color: blue;
+            height: 30px;
+            width: 100px;
+            margin-top: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+       <div class="img">
+        <img src="../Assets/multimedia/Samosa.jpg" alt="image" id="image">
+       </div>
+       <h5 id="title"></h5>
+       <div class="btn">
+        <button type="button" onclick="changeImage()">change image</button>
+       </div>
+
+    </div>
+    <script>
+        const counter=0;
+        const images=[{src:"../Assets/multimedia/Samosa.jpg",text:"Samosa"},
+                       {src:"../Assets/multimedia/Kachori.jpg",text:"Kachori"},
+                       {src:"../Assets/multimedia/wadapaw.jpg",text:"Wadapaw"} ]
+
+          let curindex=0;
+          function changeImage(){
+            curindex++;
+            if(curindex>1){
+            curindex=0;
+            }
+            document.getElementById("image").src=images[curindex].src;
+            document.getElementById("title").innerHTML=images[curindex].text;
+          }
+    </script>
+</body>
+</html>
