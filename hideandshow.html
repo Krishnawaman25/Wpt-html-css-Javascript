@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <video controls width="300px" height="200px" id="vdo">
+      <source src="../Assets/multimedia/_Aloo_Lelo_Kanda_Lelo_Ringtone_(by Fringster.com).mp3" type="audio/mp3">
+  </video>
+  <br><br>
+
+  <button type="button" id="btnHide">Hide</button>
+  &nbsp;&nbsp;&nbsp;
+  <button type="button" id="btnShow">Show</button>
+
+  <script>
+    $(document).ready(function(){
+      // Hide video
+      $('#btnHide').click(function(){
+        $('#vdo').hide(3000, function(){
+          window.alert('Video hidden successfully');
+        });
+      });
+
+      // Show video
+      $('#btnShow').click(function(){
+        $('#vdo').show(3000, function(){
+          window.alert('Video shown successfully');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

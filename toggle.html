@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Hover me
+    </h1>
+    <button type="button" id="btnHide">Hide</button> &nbsp;&nbsp;
+    <button type="button" id="btnShow">show</button>&nbsp;&nbsp;
+    <button type="button" id="btnToggle">Toggle</button><br>
+
+     <br><br>
+        <button type="button" id="up">Slide up</button>
+        <button type="button" id="down">Slide down</button>
+        <button type="button" id="togle">Toggle</button>
+        <br><br>
+         <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo voluptas molestias adipisci! Possimus repellendus sed neque ab. Sapiente a fuga rerum in impedit enim, itaque dicta aspernatur non totam tempore ipsam pariatur. Dolore tempore dolorem aperiam voluptatum vero ducimus maiores. Natus, dolore fuga quia tempora sit iure eos voluptates?</p>
+        
+    <img id="img1" src="../Assets/multimedia/krushna.jpg" alt="">
+    <script>
+$(document).ready(function(){
+      // Hide image
+      $('#btnHide').click(()=>{
+        $('#img1').hide(3000,()=>{
+          window.alert('image hide successfully');
+        });
+      });
+
+      // Show image
+     $('#btnShow').click(()=>{
+        $('#img1').show(3000, ()=>{
+          window.alert('image shown successfully');
+        })
+    });
+
+
+     $('#btnToggle').click(()=>{
+        $('#img1').toggle(300, ()=>{
+          window.alert('image toggle successfully');
+        })
+      })
+    });
+           $('#up').click(()=>{
+                $('#p1').slideUp(200);
+            })
+            $('#down').click(()=>{
+                $('#p1').slideDown(200);
+            })
+            $('#togle').click(()=>{
+                $('#p1').toggle(2000);
+            })
+            $('h1').mouseenter(function(){
+                $(this).css({"color":"red"});
+            })
+            $('h1').mouseleave(function(){
+                $(this).css({"color":"black"});
+            })
+            $('#cls1').mouseenter(function(){
+                $(this).css({'transform':'rotateX(360deg)'})
+            })
+            $('#cls1').mouseleave(function(){
+                $(this).css({'transform':'rotateY(360deg)'})
+            })
+
+
+    </script>
+</body>
+</html>
