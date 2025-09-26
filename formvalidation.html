@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+<form id="myForm">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter password"><br><br>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" placeholder="Enter contact number"><br><br>
+    <label>gender</label>
+    <input type="radio" name="gender" id= "gend" value="male">male<br>
+    <input type="radio" name="gender" id="gend" value="female">female<br>
+    <input type="radio" name="gender" id="gend" value="Other">other<br>
+    <!-- <input type="submit" value="Submit"> -->
+    <button type="submit" onclick="validateform(event)">submit</button>
+</form>
+<script>
+    function validateform(event){
+    let email=document.getElementById('email').value;
+    let password=document.getElementById('password').value;
+    let contact=document.getElementById('contact').value;
+    let gender = document.getElementById("gend").value;
+
+    let abc = /^[789]\d{9}$/;  
+    if(email=="" || !email.includes("@")){
+        alert("please enter valid email");
+        return;
+    }
+    if(password==""|| password.length<6){
+        alert("please enter valid password");
+        return;
+    }
+   if(contact==" " || !abc.test(contact)){
+    alert("Contact must start with 7 8 9 and be exactly 10 digits");
+    return;
+}
+
+    if(gender==" "){
+        alert("please enter yor gender");
+        return;
+    }
+    alert("form submitted successfully");
+}
+    </script>
+</body>
+</html>
