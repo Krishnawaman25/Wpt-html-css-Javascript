@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   
+    <title>Document</title>
+    <title>Document</title>
+    <style>
+    table{
+        border: 3px solid black;
+        }
+       td{
+        border:4px solid rgb(6, 6, 6);
+       }
+        tr{
+      border: 4px solid black;
+     }
+     
+     </style>
+</head>
+<body>
+<h2>Employee Details</h2>
+  <table id="empTable">
+      <tr>
+           <th>ID</th>
+           <th>Name</th>
+           <th>Post</th>
+           <th>Salary</th>
+           <th>Gender</th>
+           <th>Age</th>
+           <th>State</th>
+           <th>Blood Group</th>
+      </tr>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+
+</table>
+
+<script>
+ let employees = [
+  {id:1, name:"Amit",   post:"Developer", salary:50000, gender:"Male",   age:25, state:"Maharashtra", blood:"O+"},
+  {id:2, name:"Riya",   post:"Designer",  salary:45000, gender:"Female", age:23, state:"Gujarat",     blood:"B+"},
+  {id:3, name:"Raj",    post:"Manager",   salary:60000, gender:"Male",   age:30, state:"Delhi",       blood:"A+"},
+  {id:4, name:"Sara",   post:"Tester",    salary:40000, gender:"Female", age:24, state:"Kerala",      blood:"O-"},
+  {id:5, name:"Vikram", post:"HR",        salary:42000, gender:"Male",   age:28, state:"Punjab",      blood:"AB+"},
+  {id:6, name:"Neha",   post:"Admin",     salary:38000, gender:"Female", age:27, state:"Rajasthan",   blood:"B-"},
+  {id:7, name:"Arjun",  post:"Support",   salary:35000, gender:"Male",   age:26, state:"Goa",         blood:"A-"},
+  {id:8, name:"Pooja",  post:"Developer", salary:52000, gender:"Female", age:29, state:"Tamil Nadu",  blood:"O+"},
+  {id:9, name:"Karan",  post:"Sales",     salary:41000, gender:"Male",   age:31, state:"UP",          blood:"B+"},
+  {id:10,name:"Meera",  post:"Marketing", salary:46000, gender:"Female", age:22, state:"MP",          blood:"AB-"}
+];
+let tables1=document.getElementById('empTable');
+for(let c of employees){
+    let newli=document.createElement("tr");
+    for (let c1 in c){
+    let newli1=document.createElement("td");
+    newli1.innerText=c[c1];
+    newli.appendChild(newli1);   
+}
+tables1.appendChild(newli);
+
+
+}
+</script>
+    
+</body>
+</html>
